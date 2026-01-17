@@ -6,60 +6,73 @@
   <title>MAND</title>
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
+    :root{
+      --pad: 20px;
+      --max: 42rem;
     }
 
-    body {
+    html, body { margin: 0; padding: 0; }
+
+    body{
       background: #f6f3ee;
       color: #111;
-      font-family: "Georgia", "Times New Roman", serif;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      padding: var(--pad);
     }
 
-    pre {
-      margin: 0;              /* <-- geen ruimte bovenaan */
-      padding: 20px;
-      font-size: 22px;
-      line-height: 1.6;
-      white-space: pre;       /* <-- bewaart spaties exact */
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      font-size: clamp(18px, 4.5vw, 24px);
     }
+
+    .regel{
+      margin: 0 0 0.6em 0;
+      white-space: pre-wrap; /* behoudt regeleindes, maar geen mega-spaties nodig */
+    }
+
+    .rechts{
+      display: block;
+      text-align: right;
+    }
+
+    /* iets meer “lucht” bij pauzes */
+    .pauze{ margin-top: 1.2em; }
+
   </style>
 </head>
 <body>
 
-<pre>Dit is een mandje.
-Een mandje met Duits bier.
-Stiftmeister.
-Uit 1984.
+  <div class="wrap">
+    <p class="regel">Dit is een mandje.</p>
+    <p class="regel">Een mandje met Duits bier.</p>
+    <p class="regel">Stiftmeister.</p>
+    <p class="regel">Uit 1984.</p>
 
-                               Dat is te lang.
+    <p class="regel pauze"><span class="rechts">Dat is te lang.</span></p>
 
-Dit is een mandje
-met oud Duits bier.
+    <p class="regel pauze">Dit is een mandje<br>met oud Duits bier.</p>
 
-                             Nee.
-                             Nog steeds te lang.
+    <p class="regel pauze">
+      <span class="rechts">Nee.</span>
+      <span class="rechts">Nog steeds te lang.</span>
+    </p>
 
-Een mandje.
-Bier.
-Oud.
+    <p class="regel pauze">Een mandje.<br>Bier.<br>Oud.</p>
 
-                                 Nee.
+    <p class="regel pauze"><span class="rechts">Nee.</span></p>
 
-Bier.
-In een mandje.
+    <p class="regel pauze">Bier.<br>In een mandje.</p>
 
-                               Kan korter.
+    <p class="regel pauze"><span class="rechts">Kan korter.</span></p>
 
-Bier.
+    <p class="regel pauze">Bier.</p>
 
+    <p class="regel pauze">…</p>
 
-
-…
-
-MAND!!</pre>
+    <p class="regel">MAND!!</p>
+  </div>
 
 </body>
 </html>
-
