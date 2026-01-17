@@ -2,35 +2,33 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MAND!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAND</title>
+
   <style>
-    body{
-      margin:0;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#f4f3ef;
-      font-family: Georgia, serif;
+    html, body {
+      margin: 0;
+      padding: 0;
     }
-    .wrap{
-      max-width: 720px;
-      padding: 48px 28px;
+
+    body {
+      background: #f6f3ee;
+      color: #111;
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+
+    pre {
+      margin: 0;              /* <-- geen ruimte bovenaan */
+      padding: 20px;
       font-size: 22px;
-      line-height: 1.65;
-      white-space: pre-wrap; /* behoud enters/spaties */
-    }
-    .end{
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      line-height: 1.6;
+      white-space: pre;       /* <-- bewaart spaties exact */
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
 
-Dit is een mandje.
+<pre>Dit is een mandje.
 Een mandje met Duits bier.
 Stiftmeister.
 Uit 1984.
@@ -60,6 +58,8 @@ Bier.
 
 …
 
-<span class="end">MAND!!</span></div>
+MAND!!</pre>
+
 </body>
 </html>
+
